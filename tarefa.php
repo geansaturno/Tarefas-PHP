@@ -15,6 +15,6 @@
 
     $tarefa = buscaTarefa($conn, $id);
 
-    $page['body'] = 'tarefa-body';
+    $pagina['body'] = 'tarefa-body';
 
     include 'template.php';

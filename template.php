@@ -15,7 +15,7 @@
 
             <h1>Gerenciador de tarefas</h1>
 
-            <?php if($pagina['body']) :?>
+            <?php if(isset($pagina['body'])) :?>
                 <?php require "{$pagina['body']}.php" ?>
 
             <?php else : ?>

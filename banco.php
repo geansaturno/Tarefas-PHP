@@ -28,9 +28,11 @@ function buscaTarefas($conn){
 }
 
 function buscaTarefa($conn, $id){
-    $sqlBuscaTarefa = "select * from tartarefas where id = {$id}";
+    $sqlBuscaTarefa = "select * from tartarefas where i_tarid = {$id}";
 
-    $resultados = mysqli_query($conn, $sqlBuscaTarefa);
+    if(!$resultados = mysqli_query($conn, $sqlBuscaTarefa)){
+        die(mysqli_error($conn));
+    }
 
     return tarefaFactory(mysqli_fetch_assoc($resultados));
 }
